@@ -1,0 +1,25 @@
+extends ../../lib/base.jade
+
+
+block extra-style
+    style(type='text/css').
+        .text-center{
+            text-align: center;
+        }
+        .text-success{
+            color: green;
+        }
+
+block body-content
+    table
+        tbody
+            tr
+                td 
+                    img(src="https://www.python.org/static/community_logos/python-powered-w-200x80.png")
+                td
+                    p.text-success Powered by Python
+                td
+    br
+    br
+    .text-center
+        h1 xhtml2pdf for node

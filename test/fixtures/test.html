@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html></html>
+<head>
+  <title> </title>
+  <style type="text/css">
+    @page {
+        size: "A4";
+        margin-left: 2.5cm;
+        margin-right: 2.5cm;
+        margin-top: 2.5cm;
+        margin-bottom: 2cm;
+        @frame header {
+            -pdf-frame-content: page-header;
+            margin-top: 0.7cm;
+            margin-right: 2mm;
+            margin-bottom: 0cm;
+            margin-left: 1.2cm;
+        }
+        @frame footer {
+            -pdf-frame-content: page-footer;
+            bottom: 0cm;
+            margin-left: 1cm;
+            margin-right: 1cm;
+            height: 1cm;
+        }
+    }
+    
+    
+  </style>
+  <style type="text/css">
+    .text-center{
+        text-align: center;
+    }
+    .text-success{
+        color: green;
+    }
+    
+  </style>
+  <body>
+    <table>
+      <tbody>
+        <tr>
+          <td> <img src="https://www.python.org/static/community_logos/python-powered-w-200x80.png"/></td>
+          <td>
+            <p class="text-success">Powered by Python</p>
+          </td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table><br/><br/>
+    <div class="text-center">
+      <h1>xhtml2pdf for node</h1>
+    </div>
+    <div id="page-footer"><pdf:pagenumber/></div>
+  </body>
+</head>
