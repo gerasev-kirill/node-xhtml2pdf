@@ -1,0 +1,22 @@
+{
+  "name": "node-xhtml2pdf",
+  "version": "0.0.0",
+  "description": "Html to pdf converter based on python xhtml2pdf",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha --timeout 1000000 --compilers coffee:coffee-script/register --reporter nyan ./test/pdf.coffee",
+    "postinstall": "./postinstall.sh"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "coffee-script": "^1.12.2",
+    "logging": "^2.0.21",
+    "mocha": "^3.2.0"
+  },
+  "dependencies": {
+    "fs-extra": "^2.0.0",
+    "glob": "^7.1.1"
+  }
+}

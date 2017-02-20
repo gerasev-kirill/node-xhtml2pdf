@@ -1,0 +1,11 @@
+xhtml2pdf>=0.0.6
+
+
+# Dependencies of xhtml2pdf
+html5lib==1.0b8
+httplib2>=0.8
+Pillow>=2.4.0
+pyPdf2>=1.21
+reportlab>=2.7,<3
+six
+setuptools
