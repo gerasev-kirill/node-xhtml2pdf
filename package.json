@@ -1,6 +1,6 @@
 {
   "name": "node-xhtml2pdf",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Html to pdf converter based on python xhtml2pdf",
   "main": "lib/index.js",
   "scripts": {

@@ -21,6 +21,5 @@ it 'should generate pdf from html', (done)->
     html = data.toString()
     html2PdfFile html, '/tmp/test.pdf', (err, pdf)->
         spawn('evince', ['/tmp/test.pdf'])
-        console.log pdf.toString()
         console.log err
         done()
