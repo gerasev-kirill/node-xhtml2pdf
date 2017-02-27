@@ -1,11 +1,25 @@
-import sys
+# -*- coding: utf-8 -*-
+import sys, logging
 from six import BytesIO
 from xhtml2pdf import pisa
 
 
 
+class PisaNullHandler(logging.Handler):
+    def emit(self, record):
+        pass
+
+logging.getLogger("xhtml2pdf").addHandler(PisaNullHandler())
+
+
+
+
+
 def html_top_pdf(content, encoding='utf-8'):
-    src = BytesIO(content.encode(encoding))
+    try:
+        src = BytesIO(content.encode(encoding))
+    except:
+        src = BytesIO(content)
     dest = BytesIO()
 
     pdf = pisa.pisaDocument(src, dest, encoding=encoding)

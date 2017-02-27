@@ -1,6 +1,6 @@
 
-html2Pdf = require('html2Pdf.js')
-html2PdfFile = require('html2PdfFile')
+html2Pdf = require('./html2Pdf')
+html2PdfFile = require('./html2PdfFile')
 
 
 

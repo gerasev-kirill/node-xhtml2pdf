@@ -19,6 +19,7 @@ FIXTURES_DIR = BASE_DIR + '/test/fixtures'
 it 'should generate pdf from html', (done)->
     data = fs.readFileSync(path.join(FIXTURES_DIR, 'test.html'))
     html = data.toString()
+    html = html.replace('FIXTURES_DIR', FIXTURES_DIR)
     html2PdfFile html, '/tmp/test.pdf', (err, pdf)->
         spawn('evince', ['/tmp/test.pdf'])
         console.log err

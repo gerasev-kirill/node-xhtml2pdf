@@ -9,12 +9,22 @@ block extra-style
         .text-success{
             color: green;
         }
+        @font-face {
+            font-family: 'Roboto';
+            src: url(FIXTURES_DIR/Roboto-Regular.ttf);
+            font-style: normal;
+            font-weight: 400;
+        }
+        *{
+            font-family: 'Roboto';
+        }
+
 
 block body-content
     table
         tbody
             tr
-                td 
+                td
                     img(src="https://www.python.org/static/community_logos/python-powered-w-200x80.png")
                 td
                     p.text-success Powered by Python
@@ -23,3 +33,4 @@ block body-content
     br
     .text-center
         h1 xhtml2pdf for node
+        h2 xhtml2pdf для node, теперь с поддержкой utf-8

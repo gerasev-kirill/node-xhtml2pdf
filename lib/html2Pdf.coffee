@@ -8,12 +8,14 @@ BASE_DIR = path.dirname(__dirname)
 
 
 module.exports = (htmlData, cb)->
-    pdf = ''
+    pdf = []
     err = ''
-    pyHtml2Pdf = spawn(path.join(BASE_DIR, 'html2pdf.sh'))
+    pyHtml2Pdf = spawn(path.join(BASE_DIR, 'html2pdf.sh'), {
+        cwd: BASE_DIR
+    })
 
     pyHtml2Pdf.stdout.on 'data', (data)->
-        pdf = pdf + data
+        pdf.push(data)
 
     pyHtml2Pdf.stderr.on 'data', (data)->
         err = err + data.toString()
@@ -22,6 +24,9 @@ module.exports = (htmlData, cb)->
         pyHtml2Pdf.stdout.on 'end', ()->
             if !err.length
                 err = null
+                pdf = Buffer.concat(pdf)
+            else
+                pdf = null
             cb(err, pdf)
 
     pyHtml2Pdf.stdin.write(htmlData)
